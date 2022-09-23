@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="header">
+    <div class="title">COMPONENTE DE BUSCA</div>
+    <div class="subtitle">Busque resultados em sua lista de dados</div>
+  </div>
+  <form [formGroup]="form">
+    <app-search-input
+      [data]="arr"
+      [fieldName]="'nome'"
+      [fieldValue]="'id'"
+      [label]="'Cliente'"
+      [placeholder]="'Selecione um cliente'"
+      formControlName="selected"
+    ></app-search-input>
+    <span *ngIf="form.get('selected').value"
+      >Valor retornado: {{ form.get('selected').value | json }}</span
+    >
+  </form>
+
+  <div class="documentation">
+    <h2>Documentação</h2>
+    <span class="tag">
+      <b>[data]: </b> lista de objetos que deseja realizar a busca
+    </span>
+    <span class="tag">
+      <b>[fieldName]: </b> atributo do seu objeto que deseja exibir ao
+      seleciona-lo
+    </span>
+    <span class="tag">
+      <b>[fieldValue]: </b> valor do objeto que deseja retornar
+    </span>
+    <span class="tag">
+      <b>[label]: </b> indentificação que deseja atribuir ao campo
+    </span>
+    <span class="tag">
+      <b>[placeholder]: </b> mensagem ou instrução que será exibido no campo
+    </span>
+    <span class="tag">
+      <b>[formControlName]: </b> atributo do formulário reativo que deseja
+      vincular ao campo
+    </span>
+  </div>
+</div>

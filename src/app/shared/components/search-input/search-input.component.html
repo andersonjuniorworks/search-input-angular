@@ -1,0 +1,21 @@
+<div class="search-input">
+  <div class="form-group">
+    <label for="field">{{ label }}</label>
+    <input
+      id="field"
+      type="text"
+      class="form-control"
+      [placeholder]="placeholder"
+      [formControl]="inputControl"
+      (keyup)="onSearch()"
+      autocomplete="off"
+    />
+  </div>
+  <div class="dropdown-container" *ngIf="showDropdown" [@fade]>
+    <div class="dropdown" *ngFor="let item of dropdownData">
+      <div class="dropdown-item" (click)="onSelectItem(item)">
+        <span>{{ item[fieldName] }}</span>
+      </div>
+    </div>
+  </div>
+</div>
