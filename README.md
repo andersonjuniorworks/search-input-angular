@@ -1,3 +1,5 @@
-# angular-ivy-bmp6hs
+# Search Input - Componente de Busca autocompletável com Angular
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-bmp6hs)
+O componente pode ser facilmente utilizado com ReactiveForms, além de possuir fácil integração e ser extremante minimalista.
+
+[Editar com Stackblitz ⚡️](https://stackblitz.com/edit/angular-ivy-bmp6hs)
